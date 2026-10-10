@@ -1,0 +1,14 @@
+### Тест REST Client в VSCodium (нажмите "Send Request" прямо над ссылкой)
+
+### 1. Проверка публичного профиля GitHub пользователя dimonjolo
+GET https://api.github.com/users/dimonjolo
+User-Agent: VSCodium-REST-Client
+Accept: application/vnd.github.v3+json
+
+### 2. Список публичных репозиториев dimonjolo
+GET https://api.github.com/users/dimonjolo/repos?per_page=5
+User-Agent: VSCodium-REST-Client
+Accept: application/vnd.github.v3+json
+
+### 3. Проверка публичного API времени (WorldTimeAPI)
+GET http://worldtimeapi.org/api/timezone/Europe/Moscow

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VSCodium Dev Lab • Showcase</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: rgba(22, 27, 34, 0.75);
+      --border: rgba(48, 54, 61, 0.8);
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --purple: #bc8cff;
+      --text: #c9d1d9;
+      --text-bright: #f0f6fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    h1 {
+      color: var(--text-bright);
+      font-size: 26px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    p.subtitle {
+      color: #8b949e;
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      background: #161b22;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .badge-title { font-size: 11px; text-transform: uppercase; color: #8b949e; letter-spacing: 0.5px; }
+    .badge-value { font-size: 16px; font-weight: 600; color: var(--accent); margin-top: 4px; }
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .features-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; }
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #6e7681;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 VSCodium Live Server Test</h1>
+    <p class="subtitle">Тестовая веб-страница для проверки расширения Live Server (кнопка "Go Live" в нижнем статус-баре)</p>
+
+    <div class="badge-grid">
+      <div class="badge">
+        <div class="badge-title">Пользователь</div>
+        <div class="badge-value">dimonjolo</div>
+      </div>
+      <div class="badge">
+        <div class="badge-title">Стек</div>
+        <div class="badge-value">Python 3.12</div>
+      </div>
+      <div class="badge">
+        <div class="badge-title">Менеджер</div>
+        <div class="badge-value">uv</div>
+      </div>
+      <div class="badge">
+        <div class="badge-title">База данных</div>
+        <div class="badge-value">lab.db</div>
+      </div>
+    </div>
+
+    <ul class="features-list">
+      <li><span class="dot"></span> <b>SQLite Viewer:</b> кликните <code>lab.db</code> в проводнике слева.</li>
+      <li><span class="dot"></span> <b>Ruff & Pyright:</b> откройте <code>test_lint.py</code> для проверки типов и автоформата.</li>
+      <li><span class="dot"></span> <b>REST Client:</b> откройте <code>api.http</code> и кликните "Send Request".</li>
+      <li><span class="dot"></span> <b>Mermaid Diagrams:</b> откройте <code>README.md</code> и нажмите Ctrl+Shift+V.</li>
+    </ul>
+
+    <footer>Настроено специально для Димы • VSCodium + Starship + Git + gh</footer>
+  </div>
+</body>
+</html>
